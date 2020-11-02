@@ -1,0 +1,10 @@
+C:\Users\Bladimir\Documents\Lenguajes\PracticaFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe.config
+C:\Users\Bladimir\Documents\Lenguajes\PracticaFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe
+C:\Users\Bladimir\Documents\Lenguajes\PracticaFinal\ProyectoFinal\bin\Debug\ProyectoFinal.pdb
+C:\Users\Bladimir\Documents\Lenguajes\PracticaFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csprojAssemblyReference.cache
+C:\Users\Bladimir\Documents\Lenguajes\PracticaFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Form1.resources
+C:\Users\Bladimir\Documents\Lenguajes\PracticaFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Properties.Resources.resources
+C:\Users\Bladimir\Documents\Lenguajes\PracticaFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.GenerateResource.cache
+C:\Users\Bladimir\Documents\Lenguajes\PracticaFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
+C:\Users\Bladimir\Documents\Lenguajes\PracticaFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
+C:\Users\Bladimir\Documents\Lenguajes\PracticaFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
