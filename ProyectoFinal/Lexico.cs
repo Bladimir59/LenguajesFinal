@@ -9,42 +9,36 @@ namespace ProyectoFinal
 {
     class Lexico
     {
-        protected const String reservado = "variable,entero,decimal,booleano,cadena,si,sino,mientras,hacer,funcion,principal,retornar,vacio,carácter,para,imprimir";
-        protected String[] palabra = new String[] {"funcion", "principal", "retornar", "vacio", "variable", "entero", "decimal", "booleano", "cadena", "cadena", "carácter", "SI",
-        "SINO", "mientras", "para", "hacer", "imprimir"};
-        protected const String operadorAritmetico = "+-*/";
-        protected const String operadorincremneto = "++";
-        protected const String operadorDecremento = "--";
-        protected const String operadoresRelacionales = "><>=<===!=";
-        protected const String operadoresLogicos = "||&&";
-        protected const String agrupacion = "()";
-        protected const String llaves = "{}";
-        protected const String sentencia = "=;";
-        protected String[] booleano = new String[] {"VERDADERO","FALSO"};
+        protected const String reservada = "variable,entero,decimal,booleano,cadena,si,sino,mientras,hacer,funcion,principal,retornar,vacio,carácter,para,imprimir";
+        protected String[] reservada2 = {"funcion", "principal", "retornar", "vacio", "variable", "entero", "decimal", "booleano", "cadena", "cadena", "carácter", "SI",
+        "SINO","SINO_SI", "MIENTRAS", "PARA", "HACER", "imprimir","cadena",};
+        protected const String operadores = "+-*/%<>=";
+        protected const String agrupacion = "(){}";
+        protected String[] booleano = {"VERDADERO", "FALSO","verdadero","falso"}; //SINO sino
         protected const String digito = "1234567890";
-        protected const String alfabeto = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
-        protected const String simbolo = "\";1234567890(){}+-*/%<>= ";
+        protected const String alfabeto = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVW";
+        protected const String simbolos = "\";1234567890(){}+-*/%<>= ";
 
-        public readonly Transicion[] transiciones = {
-        new Transicion("S0", "/", "S1", false), new Transicion("S0", "'", "S8", false), new Transicion("S0", "\"", "S12", false),
-        new Transicion("S0", alfabeto, "S15", true, "id"), new Transicion("S0", digito, "S16", true, "entero"), new Transicion("S0", "\";", "S19", true, "signo"),
-        new Transicion("S0", agrupacion, "S20", true, "agrupacion"), new Transicion("S0", "<>=", "S21", true, "operador"),
-        new Transicion("S0", "%/*-+", "S23", true, "operador"), new Transicion("S1", "*", "S3", false),
-        new Transicion("S3", alfabeto, "S4", false), new Transicion("S3", simbolo, "S4", false), new Transicion("S4", alfabeto, "S4", false),
-        new Transicion("S4", simbolo, "S4", false), new Transicion("S4", "*", "S6", false),
-        new Transicion("S6", "/", "S7", true, "comentario"), new Transicion("S8", alfabeto, "S9", false), new Transicion("S8", simbolo, "S9", false),
-        new Transicion("S9", "'", "S10", true, "caracter"),
-        new Transicion("S12", alfabeto, "S13", false), new Transicion("S12", simbolo, "S13", false), new Transicion("S13", alfabeto, "S13", false),
-        new Transicion("S13", simbolo, "S13", false), new Transicion("S13", "\"", "S14", true, "cadena"), new Transicion("S15", alfabeto, "S15", true, "id"),
-        new Transicion("S15", digito, "S15", true, "id"),
-        new Transicion("S16", digito, "S16", true, "entero"), new Transicion("S16", ".", "S17", false), new Transicion("S17", digito, "S18", true, "flotante"),
-        new Transicion("S18", digito, "S18", true), new Transicion("S21", "=", "S22", true, "operador")};
+        public Transicion[] transiciones = {
+            new Transicion("S0", "/", "S1", false), new Transicion("S0", "'", "S8", false), new Transicion("S0", "\"", "S12", false),
+            new Transicion("S0", alfabeto, "S15", true, "id"), new Transicion("S0", digito, "S16", true, "entero"), new Transicion("S0", "\";", "S19", true, "signo"),
+            new Transicion("S0", agrupacion, "S20", true, "agrupacion"), new Transicion("S0", "<>=", "S21", true, "operador"),
+            new Transicion("S0", "%/*-+", "S23", true, "operador"), new Transicion("S1", "*", "S3", false),
+            new Transicion("S3", alfabeto, "S4", false), new Transicion("S3", simbolos, "S4", false), new Transicion("S4", alfabeto, "S4", false),
+            new Transicion("S4", simbolos, "S4", false), new Transicion("S4", "*", "S6", false),
+            new Transicion("S6", "/", "S7", true, "comentario"), new Transicion("S8", alfabeto, "S9", false), new Transicion("S8", simbolos, "S9", false),
+            new Transicion("S9", "'", "S10", true, "caracter"),
+            new Transicion("S12", alfabeto, "S13", false), new Transicion("S12", simbolos, "S13", false), new Transicion("S13", alfabeto, "S13", false),
+            new Transicion("S13", simbolos, "S13", false), new Transicion("S13", "\"", "S14", true, "cadena"), new Transicion("S15", alfabeto, "S15", true, "id"),
+            new Transicion("S15", digito, "S15", true, "id"),
+            new Transicion("S16", digito, "S16", true, "entero"), new Transicion("S16", ".", "S17", false), new Transicion("S17", digito, "S18", true, "flotante"),
+            new Transicion("S18", digito, "S18", true), new Transicion("S21", "=", "S22", true, "operador")};
 
-    private int pos = 0;
-    private Token analizado;
-    private int linea;
-    private String[] lineas;
-    private Boolean tope = false;
+        private int pos = 0;
+        private Token analizado;
+        private int linea;
+        private String[] lineas;
+        private Boolean tope = false;
 
     public Lexico()
     {
@@ -53,7 +47,7 @@ namespace ProyectoFinal
 
     public Token analizarToken()
     {
-            analizado = new Token(pos + 1, linea + 1);
+        analizado = new Token(pos + 1, linea + 1);
         recorrerMatriz(true);
         if (analizado.getTipo() != null && analizado.getTipo().Equals("id"))
         {
@@ -65,20 +59,22 @@ namespace ProyectoFinal
 
     public void recorrerMatriz(Boolean seguir)
     {
-            Char caracter = lineas[linea].ElementAt(pos);
+            Char caracter = lineas[linea][pos];
         Boolean s = false;
         if (caracter != ' ')
         {
             foreach (Transicion trans in transiciones)
             {
-                if (trans.getEstado().Equals(analizado.getEstado())
-                        && trans.getTrancision().IndexOf(caracter.ToString()) != -1)
-                {
-                    analizado.getCharacter(caracter);
-                    analizado.setEstado(trans.getEstadofinal());
-                    analizado.setTipo(trans.getTipo());
-                    s = true;
-                    pos++;
+                    Console.WriteLine(trans.getEstado());
+                    Console.WriteLine(analizado.getEstado());
+                    if (//trans.getEstado().Equals(analizado.getEstado())
+                          trans.getTrancision().IndexOf(caracter.ToString()) != -1)
+                    {
+                        analizado.getCharacter(caracter);
+                        analizado.setEstado(trans.getEstadofinal());
+                        analizado.setTipo(trans.getTipo());
+                        s = true;
+                        pos++;
                     break;
                 }
             }
@@ -170,7 +166,7 @@ namespace ProyectoFinal
 
     private void verificarReservada()
     {
-        foreach (String dato in palabra)
+        foreach (String dato in reservada2)
         {
             if (dato.Equals(analizado.getPalabra()))
             {

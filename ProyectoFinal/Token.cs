@@ -26,7 +26,7 @@ namespace ProyectoFinal
         }
         public void getCharacter(Char caracter)
         {
-            palabra += caracter;
+            palabra =palabra+ caracter;
         }
         public String getTipo()
         {

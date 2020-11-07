@@ -8,3 +8,7 @@ C:\Users\Bladimir\Documents\Lenguajes\PracticaFinal\ProyectoFinal\obj\Debug\Proy
 C:\Users\Bladimir\Documents\Lenguajes\PracticaFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
 C:\Users\Bladimir\Documents\Lenguajes\PracticaFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
 C:\Users\Bladimir\Documents\Lenguajes\PracticaFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
+C:\Users\Bladimir\Documents\Lenguajes\PracticaFinal\ProyectoFinal\bin\Debug\AutocompleteMenu-ScintillaNET.dll
+C:\Users\Bladimir\Documents\Lenguajes\PracticaFinal\ProyectoFinal\bin\Debug\ScintillaNET.dll
+C:\Users\Bladimir\Documents\Lenguajes\PracticaFinal\ProyectoFinal\bin\Debug\ScintillaNET.xml
+C:\Users\Bladimir\Documents\Lenguajes\PracticaFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CopyComplete
